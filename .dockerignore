@@ -1,0 +1,20 @@
+# 忽略文件
+.git
+.gitignore
+.dockerignore
+README.md
+*.log
+tmp/
+var/
+docker/
+**/*_test.go
+**/.DS_Store
+node_modules/
+dist/
+build/
+*.db
+*.sqlite3
+.env
+.env.local
+.env.*.local
+.idea

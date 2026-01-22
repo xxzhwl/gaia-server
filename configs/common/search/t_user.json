@@ -1,0 +1,255 @@
+{
+  "schema": "t_user",
+  "schema_name": "t_user",
+  "author": "",
+  "db_schema": "Framework.Mysql",
+  "table_name": "t_user",
+  "default_limit": 5000,
+  "time_format": "2006-01-02 15:04:05",
+  "primary_key": "id",
+  "columns": [
+    {
+      "id": "id",
+      "label": "id",
+      "sql_name": "id",
+      "data_type": "int",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "user_name",
+      "label": "user_name",
+      "sql_name": "user_name",
+      "data_type": "varchar(32)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "password",
+      "label": "password",
+      "sql_name": "password",
+      "data_type": "varchar(512)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "mail",
+      "label": "mail",
+      "sql_name": "mail",
+      "data_type": "varchar(128)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "phone_region_num",
+      "label": "phone_region_num",
+      "sql_name": "phone_region_num",
+      "data_type": "int",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "phone_num",
+      "label": "phone_num",
+      "sql_name": "phone_num",
+      "data_type": "varchar(128)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "create_time",
+      "label": "创建时间(create_time)",
+      "sql_name": "create_time",
+      "data_type": "datetime",
+      "input_type": "time",
+      "options": null,
+      "join_id": "",
+      "memo": "创建时间"
+    },
+    {
+      "id": "update_time",
+      "label": "update_time",
+      "sql_name": "update_time",
+      "data_type": "datetime",
+      "input_type": "time",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "is_ban",
+      "label": "is_ban",
+      "sql_name": "is_ban",
+      "data_type": "tinyint(1)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "is_log_out",
+      "label": "is_log_out",
+      "sql_name": "is_log_out",
+      "data_type": "tinyint(1)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "create_time_stamp",
+      "label": "创建时间时间戳(create_time_stamp)",
+      "sql_name": "create_time_stamp",
+      "data_type": "bigint",
+      "input_type": "text",
+      "options": null,
+      "join_id": "",
+      "memo": "创建时间时间戳"
+    },
+    {
+      "id": "update_time_stamp",
+      "label": "更新时间时间戳(update_time_stamp)",
+      "sql_name": "update_time_stamp",
+      "data_type": "bigint",
+      "input_type": "text",
+      "options": null,
+      "join_id": "",
+      "memo": "更新时间时间戳"
+    }
+  ],
+  "condition": [
+    {
+      "id": "id",
+      "label": "id",
+      "sql_name": "id",
+      "data_type": "int",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "user_name",
+      "label": "user_name",
+      "sql_name": "user_name",
+      "data_type": "varchar(32)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "password",
+      "label": "password",
+      "sql_name": "password",
+      "data_type": "varchar(512)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "mail",
+      "label": "mail",
+      "sql_name": "mail",
+      "data_type": "varchar(128)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "phone_region_num",
+      "label": "phone_region_num",
+      "sql_name": "phone_region_num",
+      "data_type": "int",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "phone_num",
+      "label": "phone_num",
+      "sql_name": "phone_num",
+      "data_type": "varchar(128)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "create_time",
+      "label": "创建时间(create_time)",
+      "sql_name": "create_time",
+      "data_type": "datetime",
+      "input_type": "time",
+      "options": null,
+      "join_id": "",
+      "memo": "创建时间"
+    },
+    {
+      "id": "update_time",
+      "label": "update_time",
+      "sql_name": "update_time",
+      "data_type": "datetime",
+      "input_type": "time",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "is_ban",
+      "label": "is_ban",
+      "sql_name": "is_ban",
+      "data_type": "tinyint(1)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "is_log_out",
+      "label": "is_log_out",
+      "sql_name": "is_log_out",
+      "data_type": "tinyint(1)",
+      "input_type": "text",
+      "options": [],
+      "join_id": "",
+      "memo": ""
+    },
+    {
+      "id": "create_time_stamp",
+      "label": "创建时间时间戳(create_time_stamp)",
+      "sql_name": "create_time_stamp",
+      "data_type": "bigint",
+      "input_type": "text",
+      "options": null,
+      "join_id": "",
+      "memo": "创建时间时间戳"
+    },
+    {
+      "id": "update_time_stamp",
+      "label": "更新时间时间戳(update_time_stamp)",
+      "sql_name": "update_time_stamp",
+      "data_type": "bigint",
+      "input_type": "text",
+      "options": null,
+      "join_id": "",
+      "memo": "更新时间时间戳"
+    }
+  ],
+  "joins": []
+}

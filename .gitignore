@@ -1,0 +1,5 @@
+var
+/configs/local
+/configs/remote
+.idea
+.DS_Store
