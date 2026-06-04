@@ -33,6 +33,9 @@ func (s *JobsService) InitJobRunner() {
 
 	if s.jobRunner == nil {
 		s.jobRunner = jobs.NewSecondJobs()
+		if err := s.jobRunner.Bootstrap(context.Background()); err != nil {
+			panic("jobs bootstrap failed: " + err.Error())
+		}
 		go s.jobRunner.Run()
 	}
 }
