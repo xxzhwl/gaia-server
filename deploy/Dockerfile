@@ -30,8 +30,8 @@ RUN ls -la /app/cmd/
 # 确保 shell 脚本有执行权限
 RUN chmod +x /app/cmd/*.sh
 
-# 暴露端口
-EXPOSE 8008
+# 暴露端口: 8008=HTTP服务, 9100=Prometheus指标
+EXPOSE 8008 9100
 
 # 启动 supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/gaia-server.conf"]

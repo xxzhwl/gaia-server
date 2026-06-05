@@ -71,25 +71,30 @@ services:
       timeout: 10s
       retries: 5
 
-  # Consul 服务发现
-  consul:
-    image: consul:1.15
-    container_name: gaia-consul
+  # Nacos 配置中心
+  nacos:
+    image: nacos/nacos-server:v2.3.2
+    container_name: gaia-nacos
     restart: unless-stopped
+    environment:
+      - MODE=standalone
+      - SPRING_DATASOURCE_PLATFORM=
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - TZ=Asia/Shanghai
     ports:
-      - "8500:8500"
-      - "8600:8600/tcp"
-      - "8600:8600/udp"
-    command: "agent -server -bootstrap-expect=1 -ui -bind=0.0.0.0 -client=0.0.0.0"
+      - "8848:8848"
+      - "9848:9848"
     volumes:
-      - consul_data:/consul/data
+      - nacos_data:/home/nacos/data
     networks:
       - gaia-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8500/v1/status/leader"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+      test: ["CMD", "curl", "-f", "http://localhost:8848/nacos/v1/console/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
 
   # Jaeger 分布式追踪
   jaeger:
@@ -185,7 +190,7 @@ volumes:
     driver: local
   elasticsearch_data:
     driver: local
-  consul_data:
+  nacos_data:
     driver: local
   prometheus_data:
     driver: local
