@@ -1,23 +1,6 @@
 version: '3.8'
 
 services:
-  redis:
-    image: redis:7-alpine
-    container_name: gaia-redis
-    restart: unless-stopped
-    ports:
-      - "6379:6379"
-    command: redis-server
-    volumes:
-      - redis_data:/data
-    networks:
-      - gaia-network
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
   prometheus:
     image: prom/prometheus:v2.45.0
     container_name: gaia-prometheus

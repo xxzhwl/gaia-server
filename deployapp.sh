@@ -49,20 +49,8 @@ check_prerequisites() {
 # 2. 启动基础设施服务
 # ============================================================
 start_infra() {
-    log_info "启动基础设施服务 (Redis, Prometheus, Grafana)..."
+    log_info "启动基础设施服务 (Prometheus, Grafana)..."
     $COMPOSE_CMD -f "$INFRA_COMPOSE" up -d
-
-    log_info "等待 Redis 就绪..."
-    for i in {1..20}; do
-        if docker exec gaia-redis redis-cli ping &>/dev/null; then
-            log_info "Redis 已就绪"
-            break
-        fi
-        if [ $i -eq 20 ]; then
-            log_warn "Redis 启动超时，继续部署..."
-        fi
-        sleep 2
-    done
 
     log_info "等待 Prometheus 就绪..."
     for i in {1..15}; do

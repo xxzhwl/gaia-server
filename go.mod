@@ -4,7 +4,7 @@ go 1.26.3
 
 require (
 	github.com/cloudwego/hertz v0.10.4
-	github.com/xxzhwl/gaia v0.0.0-20260605151553-8dea55c0f5c9
+	github.com/xxzhwl/gaia v0.0.0-20260606025228-153e53a7ec0d
 	go.opentelemetry.io/otel v1.44.0
 	go.opentelemetry.io/otel/metric v1.44.0
 )
